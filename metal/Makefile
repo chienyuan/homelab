@@ -10,11 +10,13 @@ default: boot cluster
 boot: ~/.ssh/id_ed25519
 	ansible-playbook \
 		--inventory inventories/${env}.yml \
+		-vvv \
 		boot.yml
 
 cluster:
 	ansible-playbook \
 		--inventory inventories/${env}.yml \
+		-vvv \
 		cluster.yml
 
 shutdown:

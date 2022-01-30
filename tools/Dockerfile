@@ -10,6 +10,9 @@ RUN pacman --sync --refresh --noconfirm \
         --sort rate
 
 RUN yes | pacman --sync --refresh \
+        which \
+        thefuck \
+        direnv \
         ansible \
         argocd \
         diffutils \
